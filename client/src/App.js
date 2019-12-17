@@ -1,14 +1,22 @@
 import React from 'react';
 
-import logo from './assets/EBLogo.jpg'
+import logo from './assets/EBLogoWhite.png'
 
 import './App.css';
+import Header from './components/Header/Header';
+import Welcome from './components/Welcome/Welcome';
+import Projects from './components/Projects/Projects';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Header/>
+      <div>
+        <Welcome/>
+        <Projects/>
+      </div>
+
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,8 +27,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
+        </a> */}
     </div>
   );
 }
