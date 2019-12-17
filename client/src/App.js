@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import logo from './assets/EBLogoWhite.png'
+import vid from './assets/lines.mp4'
 
 import './App.css';
 import Header from './components/Header/Header';
@@ -8,12 +9,17 @@ import Welcome from './components/Welcome/Welcome';
 import Projects from './components/Projects/Projects';
 
 function App() {
+
+  const projRef = useRef(null);
+
+  let scrollToProj = () => window.scrollTo(0, projRef.current.offsetTop);
+
   return (
     <div className="App">
-      <Header/>
+      <Welcome scroll={scrollToProj}/>
       <div>
-        <Welcome/>
-        <Projects/>
+        <Header/>
+        <Projects refProp={projRef}/>
       </div>
 
         {/* <img src={logo} className="App-logo" alt="logo" />
