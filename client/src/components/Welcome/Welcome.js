@@ -9,7 +9,7 @@ const Welcome = () => {
             <div className='welcome__text'>
                 <h2>Hi, I'm Ernest Bruno</h2>
                 <h2>Front-End Developer</h2>
-                <button>Learn More About Me!</button>
+                <button className='fancy-button'>Learn More About Me!</button>
             </div>
         </div>
     </div>
