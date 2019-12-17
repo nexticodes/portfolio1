@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Card from './../Card/Card.js';
+
+import './Projects.css';
+
 const Projects = () => {
 
     let projects = [
@@ -13,8 +17,11 @@ const Projects = () => {
         }
     ]
     return (
-        <div>
-
+        <div className='projects'>
+            <div className='projects__text'>
+                <h1>Here are some of the projects that I have made</h1>
+            </div>
+            {projects.map((e,i) => <Card project={e}/>)}
         </div>
     )
 }
