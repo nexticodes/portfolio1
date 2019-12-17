@@ -4,7 +4,7 @@ import Card from './../Card/Card.js';
 
 import './Projects.css';
 
-const Projects = () => {
+const Projects = (props) => {
 
     let projects = [
         {
@@ -17,7 +17,7 @@ const Projects = () => {
         }
     ]
     return (
-        <div className='projects'>
+        <div ref={props.refProp} className='projects'>
             <div className='projects__text'>
                 <h1>Here are some of the projects that I have made</h1>
             </div>
