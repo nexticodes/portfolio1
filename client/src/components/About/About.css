@@ -1,0 +1,31 @@
+.profilePic {
+    height: 500px;
+    width: 400px;
+    margin-top: -50px;
+}
+
+.about__container{
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    
+}
+
+.about__banner {
+    width: 60vw;
+    align-items: center;
+    display: block;
+    margin: auto;
+    max-width: 80vw;
+}
+
+.about__description{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.about__text h1{
+    margin-top: -60px;
+}
