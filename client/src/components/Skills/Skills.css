@@ -1,0 +1,22 @@
+.skills__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.skill__bars {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.skill__names {
+    text-align: left;
+}
+
+.skill {
+    display: flex;
+    height: 44px;
+}
+
+.skill h4{
+    margin-left: 10px;
+}
