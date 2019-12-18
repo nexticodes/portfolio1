@@ -8,7 +8,7 @@
 .welcome__picture{
     background-image: url('./../../assets/EBLogo.jpg');
     background-repeat: no-repeat;
-    background-position: 45% 40%;
+    background-position: 50% 30%;
     width: 100vw;
     height: 100vh;
     color: white;
@@ -17,7 +17,7 @@
 }
 
 .welcome__text{
-    margin-top: 62vh;
+    margin-top: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
