@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
 import logo from './assets/EBLogoWhite.png'
 import vid from './assets/lines.mp4'
@@ -7,18 +7,31 @@ import './App.css';
 import Header from './components/Header/Header';
 import Welcome from './components/Welcome/Welcome';
 import Projects from './components/Projects/Projects';
+import About from './components/About/About';
 
 function App() {
 
-  const projRef = useRef(null);
+  const [section, setSection] = useState('welcome')
 
-  let scrollToProj = () => window.scrollTo(0, projRef.current.offsetTop);
+  const projRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  let scrollToAbout = () => {
+    setSection('about');
+    window.scrollTo(0, aboutRef.current.offsetTop);
+  }
+
+  let scrollToProj = () => {
+    setSection('project');
+    window.scrollTo(0, projRef.current.offsetTop);
+  }
 
   return (
     <div className="App">
-      <Welcome scroll={scrollToProj}/>
+      <Welcome scroll={scrollToAbout}/>
       <div>
-        <Header/>
+        <Header currentSection={section}/>
+        <About refProp={aboutRef}/>
         <Projects refProp={projRef}/>
       </div>
 
