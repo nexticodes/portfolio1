@@ -16,7 +16,7 @@ const Header = (props) => {
             </div>
             <div className='spacer'></div>
             <div className='header__toggle-button'>
-                <DrawerButton/>
+                <DrawerButton click={props.click}/>
             </div>
         </div>
     )
