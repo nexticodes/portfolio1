@@ -7,8 +7,7 @@
 .about__container{
     display: flex;
     flex-direction: column;
-    height: 92vh;
-    
+    height: 100vh;
 }
 
 .about__banner {
@@ -17,6 +16,8 @@
     display: block;
     margin: auto;
     max-width: 80vw;
+    margin-bottom: 20px;
+    margin-top: 5vh;
 }
 
 .about__description{
