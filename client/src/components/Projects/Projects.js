@@ -17,9 +17,12 @@ const Projects = (props) => {
         }
     ]
     return (
-        <div ref={props.refProp} className='projects'>
-            <div className='projects__text'>
-                <h1>Here are some of the projects that I have made</h1>
+        <div ref={props.refProp} className='projects__container'>
+            <div className='projects__banner'>
+                <h1>Projects</h1>
+                <hr/>
+                <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h4>
+                <hr/>
             </div>
             {projects.map((e,i) => <Card project={e}/>)}
         </div>
