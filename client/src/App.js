@@ -12,6 +12,7 @@ import About from './components/About/About';
 function App() {
 
   const [section, setSection] = useState('welcome')
+  const [drawerStatus, setDrawerStatus] = useState();
 
   const projRef = useRef(null);
   const aboutRef = useRef(null);
@@ -26,11 +27,15 @@ function App() {
     window.scrollTo(0, projRef.current.offsetTop);
   }
 
+  let handleDrawerStatus = () => {
+    setDrawerStatus(!drawerStatus);
+  }
+
   return (
     <div className="App">
       <Welcome scroll={scrollToAbout}/>
-      <div>
-        <Header currentSection={section}/>
+      <div style={(drawerStatus) ? {background: 'white'} : {background: 'gray'}}>
+        <Header currentSection={section} click={handleDrawerStatus}/>
         <About refProp={aboutRef}/>
         <Projects refProp={projRef}/>
       </div>
