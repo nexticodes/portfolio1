@@ -1,7 +1,17 @@
-.projects {
-    background-color: #282c34;
+.projects__container {
+    background-color: rgb(214, 214, 214);
+    box-shadow: 0px 0px 25px inset black;
+    height: 80vh;
+    z-index: 2;
 }
 
-.projects__text h1{
-    margin-top: 0;
+
+.projects__banner {
+    width: 60vw;
+    align-items: center;
+    display: block;
+    margin: auto;
+    max-width: 80vw;
+    margin-bottom: 20px;
+    padding-top: 5vh;
 }
