@@ -1,0 +1,27 @@
+.drawer {
+    height: 100vh;
+    background: gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.drawer.open {
+    transform: translateY(0);
+}
+
+.drawer ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.drawer li {
+    margin: 1rem;
+}
