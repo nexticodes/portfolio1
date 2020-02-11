@@ -19,11 +19,13 @@ function App() {
 
   let scrollToAbout = () => {
     setSection('about');
+    setDrawerStatus(!drawerStatus);
     window.scrollTo(0, aboutRef.current.offsetTop);
   }
 
   let scrollToProj = () => {
     setSection('project');
+    setDrawerStatus(!drawerStatus);
     window.scrollTo(0, projRef.current.offsetTop);
   }
 
@@ -36,7 +38,7 @@ function App() {
       <Welcome scroll={scrollToAbout}/>
       <div>
         <Header currentSection={section} click={handleDrawerStatus}/>
-        <Drawer show={drawerStatus}/>
+        <Drawer show={drawerStatus} toAbout={scrollToAbout} toProject={scrollToProj}/>
         <About refProp={aboutRef}/>
         <Projects refProp={projRef}/>
       </div>

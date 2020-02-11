@@ -11,8 +11,8 @@ const Drawer = props => {
     return (
         <div className={drawerClasses}>
             <ul>
-                <li>About</li>
-                <li>Projects</li>
+                <li onClick={props.toAbout}>About</li>
+                <li onClick={props.toProject}>Projects</li>
                 <li>Contact</li>
             </ul>
         </div>
