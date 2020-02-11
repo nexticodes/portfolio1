@@ -14,6 +14,10 @@ const Projects = (props) => {
         {
             name: 'Optional Boss Website',
             link: 'https://optional-boss.herokuapp.com'
+        },
+        {
+            name: '',
+            link: ''
         }
     ]
     return (
