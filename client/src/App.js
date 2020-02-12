@@ -19,7 +19,7 @@ function App() {
 
   let scrollToAbout = () => {
     setSection('about');
-    setDrawerStatus(!drawerStatus);
+    if (drawerStatus) setDrawerStatus(!drawerStatus);
     window.scrollTo(0, aboutRef.current.offsetTop);
   }
 
