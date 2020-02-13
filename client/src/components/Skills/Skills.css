@@ -1,11 +1,12 @@
 .skills__container {
     display: flex;
     flex-direction: row;
+    width: 60vw;
+    margin: auto;
 }
 
 .skill__bars {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto;
 }
 
 .skill__names {
