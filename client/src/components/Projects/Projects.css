@@ -5,7 +5,6 @@
     z-index: 2;
 }
 
-
 .projects__banner {
     width: 60vw;
     align-items: center;
@@ -14,4 +13,12 @@
     max-width: 80vw;
     margin-bottom: 20px;
     padding-top: 8vh;
+}
+
+.projects__list {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
 }

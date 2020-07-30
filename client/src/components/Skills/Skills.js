@@ -44,11 +44,11 @@ const Skills = () => {
     return (
         <div className='skills__container'>
             <div className='skill__names'>
-                {stats.map( (e,i) => <h3 keys={i}>{e.name}</h3> )}
+                {stats.map( (e,i) => <h3 key={i}>{e.name}</h3> )}
             </div>
             <div className='skill__bars'>
                 {stats.map( (e,i) => {
-                return <div className='skill'><ProgressBar keys={i} percentage={e.level}/><h4>{e.level}%</h4></div>
+                return <div key={i+10} className='skill'><ProgressBar key={i} percentage={e.level}/><h4 key={i+20}>{e.level}%</h4></div>
                 })}
             </div>
         </div>
