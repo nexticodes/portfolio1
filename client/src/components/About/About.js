@@ -15,9 +15,9 @@ const About = (props) => {
                 <div className='about__banner'>
                     <h1>About Me</h1>
                     <hr/>
-                    <h2>I'm a Seattle-based Front End Web Developer / Engineer with a focus on JavaScript and React.</h2>
-                    <h2>
-                    I aim to use my skills to develop simple and creative solutions for clients seeking to establish and/or improve their online presence.</h2>
+                    <h3>I'm a Seattle-based Front End Web Developer / Engineer.</h3>
+                    <h3>
+                    I aim to use my skills to develop simple and creative solutions for clients seeking to establish and/or improve their online presence.</h3>
                     <hr/>
                 </div>
             </div>
