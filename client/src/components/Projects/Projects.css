@@ -22,3 +22,27 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.projects__desc-area {
+    width: 90vw;
+}
+
+.project__details {
+    width: 90vw;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.project__desc-area p {
+    padding: 7vw;
+    padding-top: 0;
+}
+
+.project__desc-area h3 {
+    margin-top: 0;
+}
+
+.project__desc-area hr {
+    width: 70vw;
+}

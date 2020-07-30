@@ -1,5 +1,13 @@
 .card__front {
   background-color: white;
   width: 30vw;
-  height: 40vh;
+  height: 30vh;
+  padding: 3vw;
+  align-items: center;
+  display: flex;
+}
+
+.card__title {
+  margin-top: auto;
+  margin-bottom: auto;
 }

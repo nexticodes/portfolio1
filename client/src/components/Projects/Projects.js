@@ -10,7 +10,7 @@ const Projects = (props) => {
 
     let projects = [
         {
-            name: 'SweatDeckTM App',
+            name: `SweatDeck™ App `,
             link: 'https://fd-sweatdeck.herokuapp.com',
             meta: 'sweat',
             desc: 'SweatDeck is a web application created in React with Node.js, Express and MongoDB in my backend which gives users access to a deck of cards -- each containing a workout circuit they can complete.\n\n\tThe application also includes a timer that the user can start and pause at will, as well as the functionality to keep a record of their workout in the app\'s database for future reference and viewing.\n\tAs the creator/developer, my responsibilities were to come up with a user-friendly and simple design that captured the vibe taht the physical deck of cards gave.'
@@ -44,10 +44,10 @@ const Projects = (props) => {
             <div className='projects__list'>
                 {projects.map((e,i) => <Card key={i} project={e} onProjectSelect={handleProjectSelect} />)}
             </div>
-            <div className='project__description'>
+            <div className='project__desc-area'>
                 {!projectSelected[0] ? 
                     <h1>Please Click on a Project above</h1> : 
-                    <div>
+                    <div className='project__details'>
                         <h3>{projectSelected[0].name}</h3>
                         <hr/>
                         <p>{projectSelected[0].desc}</p>

@@ -3,8 +3,8 @@ import './Card.css';
 
 const Card = ({project, onProjectSelect}) => {
     return (
-        <div className='card__front'>
-            <h1 onClick={onProjectSelect} value={project.meta}>{project.name}</h1>
+        <div className='card__front' onClick={onProjectSelect} value={project.meta}>
+            <h1 className='card__title'>{project.name}</h1>
         </div>
     )
 }

@@ -48,7 +48,10 @@ const Skills = () => {
             </div>
             <div className='skill__bars'>
                 {stats.map( (e,i) => {
-                return <div key={i+10} className='skill'><ProgressBar key={i} percentage={e.level}/><h4 key={i+20}>{e.level}%</h4></div>
+                return <div key={i+10} className='skill'>
+                            <ProgressBar key={i} percentage={e.level}/>
+                            <h4 key={i+20}>{e.level}%</h4>
+                        </div>
                 })}
             </div>
         </div>
