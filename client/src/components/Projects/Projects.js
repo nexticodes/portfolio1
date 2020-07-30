@@ -39,7 +39,7 @@ const Projects = (props) => {
     ]
 
     const handleProjectSelect = (e) => {
-        setProjectSelected(projects.filter(p => p.name === e.target.innerHTML));
+        setProjectSelected(projects.filter(p => p.name === e));
     }
 
     return (
@@ -51,7 +51,7 @@ const Projects = (props) => {
                 <hr/>
             </div>
             <div className='projects__list'>
-                {projects.map((e,i) => <Card key={i} project={e} onProjectSelect={handleProjectSelect} />)}
+                {projects.map((e,i) => <Card key={i} project={e} onProjectSelect={handleProjectSelect} childProjectSelected={projectSelected}/>)}
             </div>
             <div className='project__desc-area'>
                 {!projectSelected[0] ? 

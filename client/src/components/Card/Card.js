@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Card.css';
 
-const Card = ({project, onProjectSelect}) => {
+const Card = ({project, onProjectSelect, childSelectedProject}) => {
     const [hover, setHover] = useState(false);
 
     const handleHover = () => {
@@ -11,28 +11,26 @@ const Card = ({project, onProjectSelect}) => {
     const handleLeave = () => {
         setHover(false)
     }
-    
-    const handleSelect = (e) => {
-        onProjectSelect(e);
-        console.log(e);
+
+    const handleClick = () => {
+        onProjectSelect(project.name);
     }
 
+    let divClass = hover ? 'card__front hover' : 'card__front';
+    const divStyle = {
+        backgroundImage: `url(${project.pic})`,
+        backgroundColor: project.bg
+    }
 
     return (
         <div 
-            style={{width: '60vw'}} 
-            onClick={handleSelect} 
-            value={project.meta}
+            style={{width: '60vw'}}
+            onClick={handleClick}
             onMouseEnter={handleHover}
             onMouseLeave={handleLeave}>
-            <div
+            <div     
                 className={hover ? 'card__front hover' : 'card__front'}
-                style={
-                    {
-                        backgroundImage: `url(${project.pic})`,
-                        backgroundColor: project.bg
-                    }
-                } 
+                style={divStyle} 
                 >
             </div>
             {hover ? <h1 className='card__title'>{project.name}</h1> : ''}
