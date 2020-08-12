@@ -1,0 +1,6 @@
+.contact__container{
+  background-color: black;
+  box-shadow: 0px 0px 25px inset black;
+  height: 100vh;
+  z-index: 2;
+}

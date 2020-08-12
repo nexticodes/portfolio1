@@ -21,7 +21,7 @@ const Projects = (props) => {
             bg: 'black'
         },
         {
-            name: 'The Banana App',
+            name: 'Banana App',
             meta: 'banana',
             link: 'https://begoodproject.org',
             desc: 'The Banana App is a React Native / Ruby-on-rails application created and started by The Be Good Project. As one of its most recent additions to its team of volunteer developers, my duty has been to implement changes to the User Interface as reflected on the mock-up on Figma that is regularly updated by the team\'s UI/UX designers.',
@@ -29,7 +29,7 @@ const Projects = (props) => {
             bg: 'blue',
         },
         {
-            name: 'Optional Boss Website',
+            name: 'Optional Boss',
             link: 'https://optional-boss.herokuapp.com',
             meta: 'ob',
             desc: 'The Optional Boss E-sports Organization website is an informational site created in React and Node.js, deployed in Heroku, thyat relays information regarding the active members of the organization. The application utilizes the Express library that enables me to connect to third party API\'s -- namely Twitch and Twitter -- and retrieve necessary data to be displayed on the application.\n\tOne of my additional responsibilities was to constantly give updates to the members while also requesting feedback to ensure collective satisfaction regarding the website.',
@@ -53,7 +53,7 @@ const Projects = (props) => {
             <div className='projects__list'>
                 {projects.map((e,i) => <Card key={i} project={e} onProjectSelect={handleProjectSelect} childProjectSelected={projectSelected}/>)}
             </div>
-            <div className='project__desc-area'>
+            <div className={!projectSelected[0] ? 'projects__desc-area' : 'projects__desc-area-open' }>
                 {!projectSelected[0] ? 
                     <h1>Please Click on a Project above</h1> : 
                     <div className='project__details'>

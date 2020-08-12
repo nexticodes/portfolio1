@@ -8,6 +8,7 @@ import Welcome from './components/Welcome/Welcome';
 import Projects from './components/Projects/Projects';
 import About from './components/About/About';
 import Drawer from './components/DrawerButton/Drawer';
+import Contact from './components/Contact/Contact';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
 
   const projRef = useRef(null);
   const aboutRef = useRef(null);
+  const contactRef = useRef(null);
 
   let scrollToAbout = () => {
     setSection('about');
@@ -29,6 +31,12 @@ function App() {
     window.scrollTo(0, projRef.current.offsetTop);
   }
 
+  let scrollToContact = () => {
+    setSection('contact');
+    setDrawerStatus(!drawerStatus);
+    window.scrollTo(0, projRef.current.offsetTop);
+  }
+
   let handleDrawerStatus = () => {
     setDrawerStatus(!drawerStatus);
   }
@@ -38,23 +46,11 @@ function App() {
       <Welcome scroll={scrollToAbout}/>
       <div>
         <Header currentSection={section} click={handleDrawerStatus}/>
-        <Drawer show={drawerStatus} toAbout={scrollToAbout} toProject={scrollToProj}/>
+        <Drawer show={drawerStatus} toAbout={scrollToAbout} toProject={scrollToProj} toContact={scrollToContact}/>
         <About refProp={aboutRef}/>
         <Projects refProp={projRef}/>
+        <Contact refProp={contactRef}/>
       </div>
-
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
     </div>
   );
 }

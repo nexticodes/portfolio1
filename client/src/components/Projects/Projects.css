@@ -16,7 +16,7 @@
 }
 
 .projects__list {
-    width: 90vw;
+    width: 81vw;
     display: flex;
     flex-direction: row;
     margin-left: auto;
@@ -25,20 +25,33 @@
 
 .projects__desc-area {
     width: 90vw;
+    height: 10vh;
+    transition: height 3s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.open {
+    height: 25vh;
 }
 
 .project__details {
-    width: 90vw;
+    width: 81vw;
     background-color: white;
     margin-right: auto;
     margin-left: auto;
     padding-top: 2vh;
     height: 25vh;
+    margin-bottom: 0;
 }
 
+
 .project__desc-area p {
-    padding: 7vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-bottom: 0;
     padding-top: 0;
+    margin: 0;
 }
 
 .project__desc-area h3 {
