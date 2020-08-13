@@ -13,7 +13,7 @@ const Drawer = props => {
             <ul>
                 <li onClick={props.toAbout}>About</li>
                 <li onClick={props.toProject}>Projects</li>
-                <li>Contact</li>
+                <li onClick={props.toContact}>Contact</li>
             </ul>
         </div>
     )

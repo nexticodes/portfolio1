@@ -34,7 +34,7 @@ function App() {
   let scrollToContact = () => {
     setSection('contact');
     setDrawerStatus(!drawerStatus);
-    window.scrollTo(0, projRef.current.offsetTop);
+    window.scrollTo(0, contactRef.current.offsetTop);
   }
 
   let handleDrawerStatus = () => {
